@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Aced — Financial Aid Intelligence</title>
+<meta name="description" content="AI-powered financial aid intelligence for every American high schooler.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://aced-ai.academiaproxy.workers.dev; img-src 'self' data:; media-src 'self'; frame-ancestors 'none';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+</head>
+<body>
+<nav class="nav"><div class="nav-inner">
+  <div class="nav-logo" onclick="navigate('home')">
+    <video src="logo-loop.webm" autoplay muted loop playsinline class="nav-logo-vid"></video>
+    <span>Aced</span>
+  </div>
+  <div class="nav-links" id="nav-links">
+    <a href="#" onclick="navigate('matchmaker');return false;">Matchmaker</a>
+    <a href="#" onclick="navigate('scholarships');return false;">Scholarships</a>
+    <a href="#" onclick="navigate('fafsa');return false;">FAFSA</a>
+    <a href="#" onclick="navigate('decoder');return false;">Decoder <span class="nav-ai-tag">AI</span></a>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <video class="hero-video" autoplay muted loop playsinline><source src="bg.mp4" type="video/mp4"></video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-logo"><video src="logo-loop.webm" autoplay muted loop playsinline class="hero-logo-vid"></video></div>
+      <div class="hero-sub">Your Aid, Elevated</div>
+      <h1>Stop leaving <em>money</em><br>on the table.</h1>
+      <p>AI-powered financial aid intelligence for every American high schooler. Merit aid estimates, award letter decoding, FAFSA walkthrough, and deadline tracking.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="navigate('matchmaker')">Find Your Merit Aid</button>
+        <button class="btn btn-outline" onclick="navigate('decoder')">Decode Award Letter</button>
+      </div>
+    </div>
+  </div>
+  <div class="stats-bar"><div class="container"><div class="stats-grid">
+    <div class="stat-item"><div class="stat-num">$76B</div><div class="stat-label">Institutional Aid / Year</div></div>
+    <div class="stat-item"><div class="stat-num">432K</div><div class="stat-label">Fewer FAFSA Filers '24</div></div>
+    <div class="stat-item"><div class="stat-num">30%</div><div class="stat-label">FAFSA Error Rate</div></div>
+    <div class="stat-item"><div class="stat-num">$2.6B</div><div class="stat-label">Left on the Table</div></div>
+    <div class="stat-item"><div class="stat-num">$0</div><div class="stat-label">Cost to You</div></div>
+  </div></div></div>
+  <div class="section"><div class="container">
+    <h2 style="font-size:20px;font-weight:600;text-align:center;margin-bottom:32px;color:var(--text-sec)">Four tools. One mission.</h2>
+    <div class="features-grid">
+      <div class="feature-card" onclick="navigate('matchmaker')"><div class="feature-icon">&#127891;</div><h3>Merit Aid Matchmaker</h3><p>Estimated merit scholarships at 50 colleges. Named scholarship matches, profile strength, Dream/Target/Safety tiers, 4-year projections.</p><span class="feature-link">Find matches &#8594;</span></div>
+      <div class="feature-card" onclick="navigate('scholarships')"><div class="feature-icon">&#127942;</div><h3>Scholarship Browser</h3><p>Every named merit scholarship across all 50 schools in one place. Filter by your GPA and SAT to see exactly which ones you qualify for.</p><span class="feature-link">Browse scholarships &#8594;</span></div>
+      <div class="feature-card" onclick="navigate('decoder')"><div class="feature-icon">&#128270;</div><h3>Award Letter Decoder <span class="feature-badge">AI</span></h3><p>Enter your award letter numbers. Instant breakdown: free money vs loans, true out-of-pocket cost, red flags, and AI-powered analysis.</p><span class="feature-link">Decode a letter &#8594;</span></div>
+      <div class="feature-card" onclick="navigate('fafsa')"><div class="feature-icon">&#128221;</div><h3>FAFSA Walkthrough</h3><p>Every FAFSA question explained in plain English with examples. Get your SAI estimate before you even file.</p><span class="feature-link">Start walkthrough &#8594;</span></div>
+    </div>
+  </div></div>
+  <div class="section" style="border-top:1px solid var(--border)"><div class="container" style="max-width:700px">
+    <h2 style="font-size:20px;font-weight:600;text-align:center;margin-bottom:32px;color:var(--text-sec)">How it works</h2>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="min-width:36px;height:36px;border-radius:8px;background:var(--accent);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0">1</div><div><div style="font-size:15px;font-weight:600;margin-bottom:4px">Enter your profile</div><div style="font-size:13px;color:var(--text-sec)">GPA, test scores, state. 30 seconds. <a href="https://schoolnoter.github.io" target="_blank"><img src="bunked-logo.png" class="bunked-diamond-inline"> Bunked</a> users can import verified GPA instantly.</div></div></div>
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="min-width:36px;height:36px;border-radius:8px;background:var(--accent);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0">2</div><div><div style="font-size:15px;font-weight:600;margin-bottom:4px">See your merit aid estimates</div><div style="font-size:13px;color:var(--text-sec)">50 schools with named scholarship matches, strength scores, tiers, and 4-year cost projections.</div></div></div>
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="min-width:36px;height:36px;border-radius:8px;background:var(--accent);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0">3</div><div><div style="font-size:15px;font-weight:600;margin-bottom:4px">Decode your award letters</div><div style="font-size:13px;color:var(--text-sec)">Paste any college award letter and get an instant AI breakdown — free money vs debt, true cost, red flags.</div></div></div>
+      <div style="display:flex;gap:18px;align-items:flex-start"><div style="min-width:36px;height:36px;border-radius:8px;background:var(--accent);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0">4</div><div><div style="font-size:15px;font-weight:600;margin-bottom:4px">Crush the FAFSA</div><div style="font-size:13px;color:var(--text-sec)">Step-by-step walkthrough with plain English explanations and SAI estimation before you file.</div></div></div>
+    </div>
+  </div></div>
+  <div class="section"><div class="container" style="text-align:center">
+    <h2 style="font-size:22px;font-weight:600;margin-bottom:10px">Ready to find free money?</h2>
+    <p style="color:var(--text-muted);margin-bottom:24px;font-size:14px">No signup. No credit card. No catch.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-primary" onclick="navigate('matchmaker')">Open the Matchmaker</button>
+      <button class="btn btn-outline" onclick="navigate('scholarships')">Browse Scholarships</button>
+    </div>
+  </div></div>
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div><div style="display:flex;align-items:center;gap:8px;margin-bottom:12px"><video src="logo-loop.webm" autoplay muted loop playsinline width="22" height="22" style="object-fit:contain"><span style="font-size:15px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--accent)">Aced</span></div><p>Financial aid intelligence for every American high schooler. Built by students, for students.</p></div>
+      <div><h3>Tools</h3><div class="footer-links"><a href="#" onclick="navigate('matchmaker');return false">Matchmaker</a><a href="#" onclick="navigate('scholarships');return false">Scholarships</a><a href="#" onclick="navigate('fafsa');return false">FAFSA</a><a href="#" onclick="navigate('decoder');return false">Decoder</a></div></div>
+      <div><h3>Resources</h3><div class="footer-links"><a href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank">FAFSA Application</a><a href="https://studentaid.gov" target="_blank">Federal Student Aid</a><a href="https://schoolnoter.github.io" target="_blank"><img src="bunked-logo.png" class="bunked-diamond-inline"> Bunked</a></div></div>
+      <div><h3>About</h3><div class="footer-links"><a href="https://schoolnoter.github.io" target="_blank"><img src="bunked-logo.png" class="bunked-diamond-inline"> Bunked</a><a href="#">Data Sources</a><a href="#">Privacy</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>&#169; 2026 Aced. All rights reserved.</span><span>Data from public Common Data Sets. Not a guarantee of aid.</span></div>
+  </div></footer>
+</div>
+
+<!-- MATCHMAKER -->
+<div class="page" id="page-matchmaker">
+  <div class="page-header"><div class="container"><h1>Merit Aid Matchmaker</h1><p>Enter your stats. See estimated merit aid with named scholarship matches and 4-year cost projections.</p></div></div>
+  <div class="container">
+    <div class="match-input-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+        <div style="font-size:14px;font-weight:600">Your Profile</div>
+        <div><span id="bunked-status"></span> <button class="bunked-btn" onclick="openBunkedModal()" id="bunked-import-btn"><img src="bunked-logo.png" class="bunked-diamond"> Import from Bunked</button></div>
+      </div>
+      <div class="match-form" id="match-form">
+        <div class="form-group"><label>Unweighted GPA *</label><input type="number" id="m-gpa" placeholder="e.g. 3.75" min="0" max="4.0" step="0.01"></div>
+        <div class="form-group"><label>SAT Score</label><input type="number" id="m-sat" placeholder="e.g. 1350" min="400" max="1600" step="10"></div>
+        <div class="form-group"><label>ACT Score</label><input type="number" id="m-act" placeholder="e.g. 30" min="1" max="36" step="1"></div>
+        <div class="form-group"><label>State</label><select id="m-state"><option value="">Any state</option></select></div>
+        <div class="form-group"><label>Household Income</label><select id="m-income"><option value="">Skip</option><option value="30000">Under $30K</option><option value="60000">$30K-$60K</option><option value="90000">$60K-$90K</option><option value="120000">$90K-$120K</option><option value="150000">$120K+</option></select></div>
+        <div class="form-group"><button class="btn btn-primary" onclick="runMatchmaker()" style="width:100%">Find Matches</button></div>
+      </div>
+    </div>
+    <div id="match-results-area" class="hidden">
+      <div class="match-disclaimer"><strong>Important:</strong> Estimates based on historical Common Data Set filings (2024-25). Named scholarship matches show scholarships you may qualify for based on published minimums.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:12px">
+        <div id="match-count" style="font-size:13px;color:var(--text-sec)"></div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <label style="font-size:12px;color:var(--text-muted)">Sort:</label>
+          <select id="match-sort" onchange="renderResults()" style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--r-xs);font-size:13px;background:var(--surface);color:var(--text);font-family:var(--font)"><option value="aid-desc">Highest Merit Aid</option><option value="net-asc">Lowest Net Price</option><option value="chance-desc">Best Chance</option><option value="tier">Dream &#8594; Safety</option><option value="name-asc">A-Z</option></select>
+        </div>
+      </div>
+      <div class="match-filters" id="match-filters"></div>
+      <div class="match-results" id="match-results"></div>
+    </div>
+  </div>
+  <div class="compare-tray" id="compare-tray"><div class="compare-schools" id="compare-schools"></div><div style="display:flex;gap:8px"><button class="btn btn-primary btn-sm" onclick="showCompare()">Compare</button><button class="btn btn-secondary btn-sm" onclick="clearCompare()">Clear</button></div></div>
+  <div class="modal-overlay" id="school-modal" onclick="if(event.target===this)closeModal()"><div class="modal" id="school-modal-content"></div></div>
+  <div class="modal-overlay" id="compare-modal" onclick="if(event.target===this)closeCompare()"><div class="modal" id="compare-modal-content" style="max-width:950px;overflow-x:auto"></div></div>
+</div>
+
+<!-- SCHOLARSHIPS -->
+<div class="page" id="page-scholarships">
+  <div class="page-header"><div class="container"><div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px"><div><h1>Scholarship Browser</h1><p>Every named merit scholarship across 50 schools. Filter by your stats to see what you qualify for.</p></div><a href="https://schoolnoter.github.io" target="_blank" class="bunked-tag"><img src="bunked-logo.png" class="bunked-diamond"> Powered by Bunked</a></div></div></div>
+  <div class="container">
+    <div class="scholarship-filters" id="sch-filters">
+      <div class="match-input-panel" style="margin-bottom:20px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+          <div style="font-size:14px;font-weight:600">Filter by Your Stats</div>
+          <div><span id="sch-bunked-status"></span> <button class="bunked-btn" onclick="openBunkedModal()" id="sch-bunked-btn"><img src="bunked-logo.png" class="bunked-diamond"> Import from Bunked</button></div>
+        </div>
+        <div class="match-form">
+          <div class="form-group"><label>Your GPA</label><input type="number" id="sch-gpa" placeholder="e.g. 3.75" min="0" max="4.0" step="0.01"></div>
+          <div class="form-group"><label>Your SAT</label><input type="number" id="sch-sat" placeholder="e.g. 1350" min="400" max="1600" step="10"></div>
+          <div class="form-group"><button class="btn btn-primary" onclick="filterScholarships('qualified')" style="width:100%">Show My Matches</button></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap">
+        <div id="sch-count" style="font-size:13px;color:var(--text-sec)"></div>
+        <div style="margin-left:auto;display:flex;gap:6px">
+          <button class="btn btn-secondary btn-xs" onclick="filterScholarships('all')">Show All</button>
+          <button class="btn btn-secondary btn-xs" onclick="filterScholarships('qualified')">Qualified Only</button>
+        </div>
+      </div>
+    </div>
+    <div id="sch-results"></div>
+  </div>
+</div>
+
+<!-- FAFSA -->
+<div class="page" id="page-fafsa">
+  <div class="page-header"><div class="container"><h1>FAFSA Walkthrough</h1><p>Every answer prepped before you touch the real form. Plain English. AI help on every field.</p></div></div>
+  <div class="container"><div class="fafsa-container"><div class="fafsa-progress" id="fafsa-progress"></div><div class="fafsa-card" id="fafsa-card"></div></div></div>
+</div>
+
+<!-- DECODER -->
+<div class="page" id="page-decoder">
+  <div class="page-header"><div class="container"><h1>Award Letter Decoder <span class="feature-badge" style="font-size:11px">AI</span></h1><p>Enter the numbers from your financial aid award letter. AI analyzes your package for red flags and true cost.</p></div></div>
+  <div class="container">
+    <div class="dec-layout">
+      <!-- LEFT: form -->
+      <div class="dec-form-col">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:8px">
+          <h2 style="font-size:17px;font-weight:600">Your Award Letter</h2>
+          <div id="decoder-uses" style="font-size:12px;color:var(--text-muted)"></div>
+        </div>
+
+        <div class="dec-section">
+          <div class="dec-section-label">School Info</div>
+          <div class="dec-row">
+            <div class="form-group"><label>School Name</label><input type="text" id="dec-school" placeholder="e.g. University of Maryland"></div>
+          </div>
+        </div>
+
+        <div class="dec-section">
+          <div class="dec-section-label cost">Cost of Attendance</div>
+          <div class="dec-row">
+            <div class="form-group"><label>Tuition &amp; Fees</label><input type="number" id="dec-tuition" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Room &amp; Board</label><input type="number" id="dec-room" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+          <div class="dec-row">
+            <div class="form-group"><label>Books &amp; Supplies</label><input type="number" id="dec-books" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Other Expenses</label><input type="number" id="dec-other-cost" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+        </div>
+
+        <div class="dec-section">
+          <div class="dec-section-label free">Grants &amp; Scholarships <span style="font-weight:400;font-size:10px;color:var(--text-muted)">(free money)</span></div>
+          <div class="dec-row">
+            <div class="form-group"><label>Federal Pell Grant</label><input type="number" id="dec-pell" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>State Grant</label><input type="number" id="dec-state-grant" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+          <div class="dec-row">
+            <div class="form-group"><label>Institutional Grant</label><input type="number" id="dec-inst-grant" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Merit Scholarship</label><input type="number" id="dec-merit" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+          <div class="dec-row">
+            <div class="form-group"><label>Other Grant / Scholarship</label><input type="number" id="dec-other-grant" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+        </div>
+
+        <div class="dec-section">
+          <div class="dec-section-label loans">Loans <span style="font-weight:400;font-size:10px;color:var(--text-muted)">(you pay this back)</span></div>
+          <div class="dec-row">
+            <div class="form-group"><label>Subsidized Loan</label><input type="number" id="dec-sub-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Unsubsidized Loan</label><input type="number" id="dec-unsub-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+          <div class="dec-row">
+            <div class="form-group"><label>Parent PLUS Loan</label><input type="number" id="dec-plus-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Other Loan</label><input type="number" id="dec-other-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+        </div>
+
+        <div class="dec-section">
+          <div class="dec-section-label ws">Work-Study</div>
+          <div class="dec-row">
+            <div class="form-group"><label>Federal Work-Study</label><input type="number" id="dec-work-study" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+          </div>
+        </div>
+
+        <div class="dec-section">
+          <div class="dec-section-label">Context <span style="font-weight:400;font-size:10px;color:var(--text-muted)">(optional — helps AI analysis)</span></div>
+          <div class="dec-row">
+            <div class="form-group"><label>Family Income</label><select id="dec-income"><option value="">Skip</option><option value="30000">Under $30K</option><option value="48000">$30K–$48K</option><option value="75000">$48K–$75K</option><option value="110000">$75K–$110K</option><option value="150000">$110K+</option></select></div>
+            <div class="form-group"><label>In-State?</label><select id="dec-instate"><option value="">Not sure</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="decodeAwardLetter()" id="decode-btn">Analyze My Package</button>
+          <button class="btn btn-secondary btn-sm" onclick="clearDecoder()">Clear All</button>
+          <div id="decoder-loading" style="display:none;align-items:center;gap:8px"><div class="spinner"></div><span style="font-size:13px;color:var(--text-sec)">AI analyzing...</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: live summary + AI result -->
+      <div class="dec-result-col">
+        <div class="dec-summary" id="dec-summary">
+          <h3 style="font-size:15px;font-weight:600;margin-bottom:16px">Live Summary</h3>
+          <div class="dec-summary-row"><span>Cost of Attendance</span><span class="dec-val" id="ds-coa">$0</span></div>
+          <div class="dec-summary-row free"><span>Total Free Money</span><span class="dec-val" id="ds-free">$0</span></div>
+          <div class="dec-summary-row loans"><span>Total Loans</span><span class="dec-val" id="ds-loans">$0</span></div>
+          <div class="dec-summary-row ws"><span>Work-Study</span><span class="dec-val" id="ds-ws">$0</span></div>
+          <div class="dec-divider"></div>
+          <div class="dec-summary-row big"><span>Out-of-Pocket</span><span class="dec-val" id="ds-oop">$0</span></div>
+          <div class="dec-summary-row big"><span>Unmet Need</span><span class="dec-val" id="ds-gap">$0</span></div>
+          <div class="dec-divider"></div>
+          <div class="dec-summary-row"><span>Est. Monthly Payment</span><span class="dec-val" id="ds-monthly">$0/mo</span></div>
+          <div class="dec-summary-row"><span>4-Year Loan Total</span><span class="dec-val" id="ds-4yr">$0</span></div>
+          <div id="dec-flags" style="margin-top:14px"></div>
+        </div>
+        <div id="decoder-result" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BUNKED LOGIN MODAL -->
+<div class="modal-overlay" id="bunked-modal" onclick="if(event.target===this)closeBunkedModal()">
+  <div class="bunked-modal">
+    <button class="modal-close" onclick="closeBunkedModal()">&times;</button>
+    <div id="bunked-modal-body">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><img src="bunked-logo.png" width="32" height="32" style="object-fit:contain"><h2>Sign in with Bunked</h2></div>
+      <p style="font-size:13px;color:var(--text-sec);margin-bottom:20px">Import your verified GPA from StudentVUE. Your credentials are sent directly to your school district's server.</p>
+      <div class="bunked-form">
+        <div class="form-group"><label>StudentVUE Username</label><input type="text" id="bunked-user" placeholder="Your StudentVUE username"></div>
+        <div class="form-group"><label>StudentVUE Password</label><input type="password" id="bunked-pass" placeholder="Your StudentVUE password"></div>
+        <div class="form-group"><label>School District</label><select id="bunked-district"><option value="md-mcps">Montgomery County, MD (MCPS)</option><option value="va-fcps">Fairfax County, VA (FCPS)</option><option value="va-lcps">Loudoun County, VA (LCPS)</option><option value="va-pwcs">Prince William County, VA (PWCS)</option><option value="md-pgcps">Prince George's County, MD (PGCPS)</option><option value="md-aacps">Anne Arundel County, MD (AACPS)</option><option value="md-bcps">Baltimore County, MD (BCPS)</option><option value="md-hcps">Howard County, MD (HCPS)</option></select></div>
+        <button class="btn btn-primary" onclick="bunkedLogin()" id="bunked-login-btn" style="width:100%">Import My GPA</button>
+        <div class="bunked-error" id="bunked-error"></div>
+        <div class="bunked-loading" id="bunked-loading"><div class="spinner"></div><span>Connecting to StudentVUE...</span></div>
+      </div>
+      <div class="bunked-success" id="bunked-success"><div style="margin-bottom:10px"><img src="bunked-logo.png" width="48" height="48" style="object-fit:contain"></div><h3 style="font-size:20px;font-weight:600;margin-bottom:4px">GPA Imported!</h3><p style="font-size:14px;color:var(--text-sec)" id="bunked-result-text"></p><button class="btn btn-primary" onclick="closeBunkedModal()" style="margin-top:14px">Continue to Matchmaker</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- AI FAFSA HELP MODAL -->
+<div class="modal-overlay" id="ai-help-modal" onclick="if(event.target===this)closeAiHelp()">
+  <div class="modal" style="max-width:520px">
+    <button class="modal-close" onclick="closeAiHelp()">&times;</button>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px"><span style="font-size:18px">&#9824;</span><h3 style="font-size:18px;font-weight:600">AI Help</h3></div>
+    <div id="ai-help-body" style="font-size:14px;line-height:1.7;color:var(--text-sec)"><div style="display:flex;align-items:center;gap:8px;color:var(--text-muted)"><div class="spinner"></div><span>Getting answer...</span></div></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+// Anti-copy protection
+(function(){
+  // Console warning
+  console.log("%c STOP","color:red;font-size:48px;font-weight:bold;");
+  console.log("%c This is proprietary software. Unauthorized copying, modification, or redistribution is prohibited.","color:#999;font-size:14px;");
+  console.log("%c © 2026 Aced. All rights reserved.","color:#666;font-size:12px;");
+
+  // Block common copy shortcuts
+  document.addEventListener("keydown",function(e){
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+Shift+I (devtools), F12
+    if((e.ctrlKey&&(e.key==="u"||e.key==="s"))||(e.ctrlKey&&e.shiftKey&&(e.key==="I"||e.key==="J"||e.key==="C"))||e.key==="F12"){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+
+  // Disable right-click on page (not on inputs)
+  document.addEventListener("contextmenu",function(e){
+    if(!e.target.closest("input,textarea,select")){e.preventDefault();}
+  });
+
+  // Detect devtools via debugger timing
+  var _d=new Date();debugger;if(new Date()-_d>100){document.body.innerHTML="<div style='text-align:center;padding:100px;font-family:monospace;color:#c00'><h1>Developer tools detected</h1><p>Please close developer tools to use Aced.</p></div>";}
+})();
+</script>
+</body>
+</html>
