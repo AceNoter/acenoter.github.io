@@ -153,53 +153,53 @@
         <div class="dec-section">
           <div class="dec-section-label">School Info</div>
           <div class="dec-row">
-            <div class="form-group"><label>School Name</label><input type="text" id="dec-school" placeholder="e.g. University of Maryland"></div>
+            <div class="form-group"><label>School Name</label><input type="text" id="dec-school" placeholder="e.g. University of Maryland" maxlength="100"></div>
           </div>
         </div>
 
         <div class="dec-section">
           <div class="dec-section-label cost">Cost of Attendance</div>
           <div class="dec-row">
-            <div class="form-group"><label>Tuition &amp; Fees</label><input type="number" id="dec-tuition" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
-            <div class="form-group"><label>Room &amp; Board</label><input type="number" id="dec-room" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Tuition &amp; Fees</label><input type="number" id="dec-tuition" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Room &amp; Board</label><input type="number" id="dec-room" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
           <div class="dec-row">
-            <div class="form-group"><label>Books &amp; Supplies</label><input type="number" id="dec-books" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
-            <div class="form-group"><label>Other Expenses</label><input type="number" id="dec-other-cost" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Books &amp; Supplies</label><input type="number" id="dec-books" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Other Expenses</label><input type="number" id="dec-other-cost" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
         </div>
 
         <div class="dec-section">
           <div class="dec-section-label free">Grants &amp; Scholarships <span style="font-weight:400;font-size:10px;color:var(--text-muted)">(free money)</span></div>
           <div class="dec-row">
-            <div class="form-group"><label>Federal Pell Grant</label><input type="number" id="dec-pell" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
-            <div class="form-group"><label>State Grant</label><input type="number" id="dec-state-grant" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Federal Pell Grant</label><input type="number" id="dec-pell" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>State Grant</label><input type="number" id="dec-state-grant" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
           <div class="dec-row">
-            <div class="form-group"><label>Institutional Grant</label><input type="number" id="dec-inst-grant" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
-            <div class="form-group"><label>Merit Scholarship</label><input type="number" id="dec-merit" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Institutional Grant</label><input type="number" id="dec-inst-grant" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Merit Scholarship</label><input type="number" id="dec-merit" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
           <div class="dec-row">
-            <div class="form-group"><label>Other Grant / Scholarship</label><input type="number" id="dec-other-grant" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Other Grant / Scholarship</label><input type="number" id="dec-other-grant" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
         </div>
 
         <div class="dec-section">
           <div class="dec-section-label loans">Loans <span style="font-weight:400;font-size:10px;color:var(--text-muted)">(you pay this back)</span></div>
           <div class="dec-row">
-            <div class="form-group"><label>Subsidized Loan</label><input type="number" id="dec-sub-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
-            <div class="form-group"><label>Unsubsidized Loan</label><input type="number" id="dec-unsub-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Subsidized Loan</label><input type="number" id="dec-sub-loan" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Unsubsidized Loan</label><input type="number" id="dec-unsub-loan" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
           <div class="dec-row">
-            <div class="form-group"><label>Parent PLUS Loan</label><input type="number" id="dec-plus-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
-            <div class="form-group"><label>Other Loan</label><input type="number" id="dec-other-loan" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Parent PLUS Loan</label><input type="number" id="dec-plus-loan" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Other Loan</label><input type="number" id="dec-other-loan" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
         </div>
 
         <div class="dec-section">
           <div class="dec-section-label ws">Work-Study</div>
           <div class="dec-row">
-            <div class="form-group"><label>Federal Work-Study</label><input type="number" id="dec-work-study" placeholder="$0" min="0" oninput="updateDecoderTotals()"></div>
+            <div class="form-group"><label>Federal Work-Study</label><input type="number" id="dec-work-study" placeholder="$0" min="0" max="500000" oninput="updateDecoderTotals()"></div>
           </div>
         </div>
 
